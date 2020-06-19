@@ -15,6 +15,7 @@ public class TestGenerator {
         }
         final String definitions = Arrays.stream(clazz.getDeclaredMethods())
                 .map(m -> '"' + m.getName() + '"')
+                .sorted()
                 .collect(Collectors.joining(", ", "[", "]"));
         try (BufferedWriter writer = Files.newBufferedWriter(output, StandardCharsets.UTF_8)) {
             writer.append(definitions);

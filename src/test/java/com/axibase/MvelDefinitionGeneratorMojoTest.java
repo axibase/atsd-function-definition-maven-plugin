@@ -33,7 +33,7 @@ public class MvelDefinitionGeneratorMojoTest
         assertNotNull( outputPath );
         assertTrue( outputPath.exists() );
         final byte[] content = Files.readAllBytes(outputPath.toPath());
-        final byte[] expected = "[\"getStringValue\", \"calculate\"]".getBytes(StandardCharsets.UTF_8);
+        final byte[] expected = "[\"calculate\", \"getStringValue\"]".getBytes(StandardCharsets.UTF_8);
         assertArrayEquals(expected, content);
     }
 }
