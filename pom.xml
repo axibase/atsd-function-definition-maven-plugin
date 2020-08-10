@@ -7,7 +7,7 @@
 
     <groupId>com.axibase</groupId>
     <artifactId>atsd-function-definition-maven-plugin</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>maven-plugin</packaging>
 
     <name>ATSD Function Definition Generator Maven Plugin</name>

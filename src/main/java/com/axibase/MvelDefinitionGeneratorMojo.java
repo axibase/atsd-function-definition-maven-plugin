@@ -65,7 +65,6 @@ public class MvelDefinitionGeneratorMojo extends AbstractMojo {
         final URL[] classpath;
         try {
             classpath = project.getRuntimeClasspathElements().stream()
-                    .peek(cp -> getLog().info(cp))
                     .map(this::uriToURL)
                     .toArray(URL[]::new);
         } catch (DependencyResolutionRequiredException e) {
